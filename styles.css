@@ -1,0 +1,205 @@
+body {
+    background-image: url("images/background.png");
+    background-size: 480px 480px;
+    overflow: hidden;
+}
+
+#header {
+    text-align: center;
+}
+
+#header-title {
+    font-family: "M PLUS 1p";
+    font-size: 36px;
+    text-decoration: none;
+    color: #faf5f5;
+    text-shadow    : 
+       4px  4px 3px #333333,
+      -4px  4px 3px #333333,
+       4px -4px 3px #333333,
+      -4px -4px 3px #333333,
+       4px  0px 3px #333333,
+       0px  4px 3px #333333,
+      -4px  0px 3px #333333,
+       0px -4px 3px #333333; 
+}
+
+#header-desc {
+    color: #333;
+}
+
+#main {
+    width: 768px;
+    margin: auto;
+}
+
+#capture {
+    width: 480px;
+    height: 270px;
+    margin: auto;
+}
+
+#frame {
+    width: 480px;
+    height: 270px;
+    background-color: #ffb6c1;
+}
+
+#base {
+    width: 444px;
+    height: 234px;
+    position: relative;
+    top: 18px;
+    left: 18px;
+    background-color: white;
+    display: flex;
+}
+
+#cat-image {
+    width: 160px;
+    height: 160px;
+    position: relative;
+    top: 37px;
+}
+
+.color1 {
+    background-color: #ffb6c1;
+}
+
+.color2 {
+    background-color: #fff4b5;
+}
+
+.color3 {
+    background-color: #c0ffb5;
+}
+
+.color4 {
+    background-color: #b5fff4;
+}
+
+.color5 {
+    background-color: #b5c0ff;
+}
+
+.color6 {
+    background-color: #f4b5ff;
+}
+
+#title-1 {
+    font-family: "M PLUS 1p";
+    font-size: 50px;
+    position: absolute;
+    bottom: 120px;
+    left: 160px;
+    color: #fff4b5;
+    letter-spacing : 0px;
+    text-shadow    : 
+       4px  4px 3px #333333,
+      -4px  4px 3px #333333,
+       4px -4px 3px #333333,
+      -4px -4px 3px #333333,
+       4px  0px 3px #333333,
+       0px  4px 3px #333333,
+      -4px  0px 3px #333333,
+       0px -4px 3px #333333;  
+}
+
+#title-2 {
+    font-family: "M PLUS 1p";
+    font-size: 50px;
+    position: absolute;
+    bottom: 40px;
+    left: 160px;
+    color: #b5c0ff;
+    letter-spacing : 0px;
+    text-shadow    : 
+       4px  4px 3px #333333,
+      -4px  4px 3px #333333,
+       4px -4px 3px #333333,
+      -4px -4px 3px #333333,
+       4px  0px 3px #333333,
+       0px  4px 3px #333333,
+      -4px  0px 3px #333333,
+       0px -4px 3px #333333;  
+}
+
+.input-number {
+    max-width: 60%;
+}
+
+.img-opt {
+    max-width: 100%;
+}
+
+#generate {
+    text-align: center;
+}
+
+.popup-center {
+    text-align: center;
+}
+
+/*  ポップアップ用css*/
+.popup {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: .6s;
+}
+.popup.is-show {
+    opacity: 1;
+    visibility: visible;
+}
+.popup-inner {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 80%;
+    max-width: 800px;
+    padding: 50px;
+    background-color: #fff;
+    z-index: 2;
+}
+.close-btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    cursor: pointer;
+}
+.close-btn i {
+    font-size: 20px;
+    color: #333;
+}
+.black-background {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.8);
+    z-index: 1;
+    cursor: pointer;
+}
+
+/* 画面幅768未満は非表示にする */
+@media (max-width: 767px) {
+    #main {
+        display: none;
+    }
+}
+@media (min-width:  768px) {
+    #main-another {
+        display: none;
+    }
+}

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/favicon.ico">
+    <title>サムネメーカー</title>
+
+    <!-- FontAwsomeの読み込み -->
+    <link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+    <!-- cssの読み込み -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- googleフォントの読み込み -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@700&display=swap" rel="stylesheet">
+    <!-- BootstrapのCSS読み込み -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- jQuery読み込み -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+</head>
+<body>
+    <div id="header">
+        <a id="header-title" href="https://ruemura3.com/thumbnailmaker">サムネメーカー </a>
+        <!-- <a id="header-desc" href="https://ruemura3.com/thumbnailmaker">このページについて</a> -->
+    </div>
+    <div id="main-another">
+        <div>画面幅768px以上でしか表示できません。</div>
+    </div>
+    <div id="main" class="mt-3">
+        <div class="row">
+            <!-- サムネ部分 -->
+            <div class="col-8">
+                <div id="capture">
+                    <div id="frame">
+                        <div id="base">
+                            <img src="images/cat01.png"  id="cat-image">
+                            <div id="title-1">タイトル１</div>
+                            <div id="title-2">タイトル２</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 画像選択 -->
+            <div class="col-4">
+                <div id="cat-images">
+                    <div class="row">
+                        <div class="col-4 p-0">
+                            <img src="images/cat01.png" class="img-opt" onclick="choiceImg(1)">
+                        </div>
+                        <div class="col-4 p-0">
+                            <img src="images/cat02.png" class="img-opt" onclick="choiceImg(2)">
+                        </div>
+                        <div class="col-4 p-0">
+                            <img src="images/cat03.png" class="img-opt" onclick="choiceImg(3)">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4 p-0">
+                            <img src="images/cat04.png" class="img-opt" onclick="choiceImg(4)">
+                        </div>
+                        <div class="col-4 p-0">
+                            <img src="images/cat05.png" class="img-opt" onclick="choiceImg(5)">
+                        </div>
+                        <div class="col-4 p-0">
+                            <img src="images/cat06.png" class="img-opt" onclick="choiceImg(6)">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4 p-0">
+                            <img src="images/cat07.png" class="img-opt" onclick="choiceImg(7)">
+                        </div>
+                        <div class="col-4 p-0">
+                            <img src="images/cat08.png" class="img-opt" onclick="choiceImg(8)">
+                        </div>
+                        <div class="col-4 p-0">
+                            <img src="images/cat09.png" class="img-opt" onclick="choiceImg(9)">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- コントロール部 -->
+        <!-- タイトル入力 -->
+        <div id="title">
+            <div class="row">
+                <div class="col-6">
+                    <!-- 文字1 -->
+                    <div class="mt-3">タイトル１</div>
+                    <input type="text" id="title-txt-1" class="form-control" placeholder="タイトル１" oninput="inputTitle(1)">
+                    <!-- 文字位置1 -->
+                    <div id="text-1-position" class="form-control">
+                        <div class="row">
+                            <div class="col-4">
+                                <label>上下</label>
+                                <input id="vertical-1" class="input-number" type="number"value="120" oninput="vertical(1)">
+                            </div>
+                            <div class="col-4">
+                                <label>左右</label>
+                                <input id="horizontal-1" class="input-number" type="number"value="36" oninput="horizontal(1)">
+                            </div>
+                            <div class="col-4">
+                                <label>大小</label>
+                                <input id="size-1" class="input-number" type="number"value="50" oninput="sizing(1)">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 文字色1 -->
+                    <div class="form-control">
+                        <div class="row mx-2">
+                            <button class="col-2 color1" onclick="textColor1(0)">　</button>
+                            <button class="col-2 color2" onclick="textColor1(1)">　</button>
+                            <button class="col-2 color3" onclick="textColor1(2)">　</button>
+                            <button class="col-2 color4" onclick="textColor1(3)">　</button>
+                            <button class="col-2 color5" onclick="textColor1(4)">　</button>
+                            <button class="col-2 color6" onclick="textColor1(5)">　</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <!-- 文字2 -->
+                    <div class="mt-3">タイトル２</div>
+                    <input type="text" id="title-txt-2" class="form-control" placeholder="タイトル２" oninput="inputTitle(2)">
+                    <!-- 文字位置2 -->
+                    <div id="text-2-position" class="form-control">
+                        <div class="row">
+                            <div class="col-4">
+                                <label>上下</label>
+                                <input id="vertical-2" class="input-number" type="number"value="120" oninput="vertical(2)">
+                            </div>
+                            <div class="col-4">
+                                <label>左右</label>
+                                <input id="horizontal-2" class="input-number" type="number"value="36" oninput="horizontal(2)">
+                            </div>
+                            <div class="col-4">
+                                <label>大小</label>
+                                <input id="size-2" class="input-number" type="number"value="50" oninput="sizing(2)">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 文字色2 -->
+                    <div class="form-control">
+                        <div class="row mx-2">
+                            <button class="col-2 color1" onclick="textColor2(0)">　</button>
+                            <button class="col-2 color2" onclick="textColor2(1)">　</button>
+                            <button class="col-2 color3" onclick="textColor2(2)">　</button>
+                            <button class="col-2 color4" onclick="textColor2(3)">　</button>
+                            <button class="col-2 color5" onclick="textColor2(4)">　</button>
+                            <button class="col-2 color6" onclick="textColor2(5)">　</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-8">
+                <!-- カテゴリ選択 -->
+                <div class="mt-3">カテゴリ</div>
+                <div id="choice-category">
+                    <div class="form-control">
+                        <div class="row mx-2">
+                            <button class="col-4 color1" onclick="frameColor(0)">収入を増やす</button>
+                            <button class="col-4 color2" onclick="frameColor(1)">支出を減らす</button>
+                            <button class="col-4 color3" onclick="frameColor(2)">資産を運用する</button>
+                        </div>
+                        <div class="row mx-2">
+                            <button class="col-4 color4" onclick="frameColor(3)">全般知識</button>
+                            <button class="col-4 color5" onclick="frameColor(4)">その他</button>
+                            <button class="col-4 color6" onclick="frameColor(5)">(未割り当て)</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                
+                <!-- 画像選択 -->
+                <div id="generate" class="mt-2">
+                    <p>以下のボタンを押すと画像が<br>ポップアップで表示されます</p>
+                    <button id="js-show-popup" class="btn btn-outline-dark form-control">画像生成</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 画像表示部 -->
+        <div class="popup" id="js-popup">
+            <div class="popup-inner">
+                <div class="close-btn" id="js-close-btn"><i class="fas fa-times"></i></div>
+                <p class="popup-center">以下の画像を右クリックから保存してください</p>
+                <div class="popup-center" id="result"></div>
+            </div>
+            <div class="black-background" id="js-black-bg"></div>
+        </div>
+    </div>
+
+    <!-- JavaScriptの読み込み -->
+    <script src="html2canvas.js"></script>
+    <script src="scripts.js"></script>
+    <!-- BootstrapのJS読み込み -->
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
