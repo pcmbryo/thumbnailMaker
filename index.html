@@ -37,6 +37,12 @@
                             <img src="images/cat01.png"  id="cat-image">
                             <div id="title-1">タイトル１</div>
                             <div id="title-2">タイトル２</div>
+                            <div id="title-3-none">
+                                <div id="title-3">タイトル３</div>
+                            </div>
+                            <div id="title-4-none">
+                                <div id="title-4">タイトル４</div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -46,35 +52,46 @@
                 <div id="cat-images">
                     <div class="row">
                         <div class="col-4 p-0">
-                            <img src="images/cat01.png" class="img-opt" onclick="choiceImg(1)">
+                            <img src="images/cat01.png" class="img-opt" onclick="choiceCatImg(1)">
                         </div>
                         <div class="col-4 p-0">
-                            <img src="images/cat02.png" class="img-opt" onclick="choiceImg(2)">
+                            <img src="images/cat02.png" class="img-opt" onclick="choiceCatImg(2)">
                         </div>
                         <div class="col-4 p-0">
-                            <img src="images/cat03.png" class="img-opt" onclick="choiceImg(3)">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-4 p-0">
-                            <img src="images/cat04.png" class="img-opt" onclick="choiceImg(4)">
-                        </div>
-                        <div class="col-4 p-0">
-                            <img src="images/cat05.png" class="img-opt" onclick="choiceImg(5)">
-                        </div>
-                        <div class="col-4 p-0">
-                            <img src="images/cat06.png" class="img-opt" onclick="choiceImg(6)">
+                            <img src="images/cat03.png" class="img-opt" onclick="choiceCatImg(3)">
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-4 p-0">
-                            <img src="images/cat07.png" class="img-opt" onclick="choiceImg(7)">
+                            <img src="images/cat04.png" class="img-opt" onclick="choiceCatImg(4)">
                         </div>
                         <div class="col-4 p-0">
-                            <img src="images/cat08.png" class="img-opt" onclick="choiceImg(8)">
+                            <img src="images/cat05.png" class="img-opt" onclick="choiceCatImg(5)">
                         </div>
                         <div class="col-4 p-0">
-                            <img src="images/cat09.png" class="img-opt" onclick="choiceImg(9)">
+                            <img src="images/cat06.png" class="img-opt" onclick="choiceCatImg(6)">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4 p-0">
+                            <img src="images/cat07.png" class="img-opt" onclick="choiceCatImg(7)">
+                        </div>
+                        <div class="col-4 p-0">
+                            <img src="images/cat08.png" class="img-opt" onclick="choiceCatImg(8)">
+                        </div>
+                        <div class="col-4 p-0">
+                            <img src="images/cat09.png" class="img-opt" onclick="choiceCatImg(9)">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-4 p-0">
+                            <img src="images/ryo01.png" class="img-opt" onclick="choiceRyoImg(1)">
+                        </div>
+                        <div class="col-4 p-0">
+                            <img src="images/rieko01.png" class="img-opt" onclick="choiceRiekoImg(1)">
+                        </div>
+                        <div class="col-4 p-0">
+                            <img src="images/nothing.png" class="img-opt" onclick="choiceNoImg()">
                         </div>
                     </div>
                 </div>
@@ -150,6 +167,84 @@
                             <button class="col-2 color6" onclick="textColor2(5)">　</button>
                         </div>
                     </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-6">
+                    <div id="title-input-3-none">
+                        <!-- 文字3 -->
+                        <div class="mt-3">タイトル３</div>
+                        <input type="text" id="title-txt-3" class="form-control" placeholder="タイトル３" oninput="inputTitle(3)">
+                        <!-- 文字位置3 -->
+                        <div id="text-3-position" class="form-control">
+                            <div class="row">
+                                <div class="col-4">
+                                    <label>上下</label>
+                                    <input id="vertical-3" class="input-number" type="number"value="120" oninput="vertical(3)">
+                                </div>
+                                <div class="col-4">
+                                    <label>左右</label>
+                                    <input id="horizontal-3" class="input-number" type="number"value="36" oninput="horizontal(3)">
+                                </div>
+                                <div class="col-4">
+                                    <label>大小</label>
+                                    <input id="size-3" class="input-number" type="number"value="50" oninput="sizing(3)">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 文字色3 -->
+                        <div class="form-control">
+                            <div class="row mx-2">
+                                <button class="col-2 color1" onclick="textColor3(0)">　</button>
+                                <button class="col-2 color2" onclick="textColor3(1)">　</button>
+                                <button class="col-2 color3" onclick="textColor3(2)">　</button>
+                                <button class="col-2 color4" onclick="textColor3(3)">　</button>
+                                <button class="col-2 color5" onclick="textColor3(4)">　</button>
+                                <button class="col-2 color6" onclick="textColor3(5)">　</button>
+                            </div>
+                        </div>
+                    </div>
+                    <button id="title-button-3" class="btn btn-outline-dark form-control mt-2" onclick="switchTitle3()">
+                        <i class="fas fa-plus"></i>
+                    </button>
+                </div>
+                <div class="col-6">
+                    <div id="title-input-4-none">
+                        <!-- 文字4 -->
+                        <div class="mt-3">タイトル４</div>
+                        <input type="text" id="title-txt-4" class="form-control" placeholder="タイトル４" oninput="inputTitle(4)">
+                        <!-- 文字位置4 -->
+                        <div id="text-4-position" class="form-control">
+                            <div class="row">
+                                <div class="col-4">
+                                    <label>上下</label>
+                                    <input id="vertical-4" class="input-number" type="number"value="120" oninput="vertical(4)">
+                                </div>
+                                <div class="col-4">
+                                    <label>左右</label>
+                                    <input id="horizontal-4" class="input-number" type="number"value="36" oninput="horizontal(4)">
+                                </div>
+                                <div class="col-4">
+                                    <label>大小</label>
+                                    <input id="size-4" class="input-number" type="number"value="50" oninput="sizing(4)">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 文字色4 -->
+                        <div class="form-control">
+                            <div class="row mx-2">
+                                <button class="col-2 color1" onclick="textColor4(0)">　</button>
+                                <button class="col-2 color2" onclick="textColor4(1)">　</button>
+                                <button class="col-2 color3" onclick="textColor4(2)">　</button>
+                                <button class="col-2 color4" onclick="textColor4(3)">　</button>
+                                <button class="col-2 color5" onclick="textColor4(4)">　</button>
+                                <button class="col-2 color6" onclick="textColor4(5)">　</button>
+                            </div>
+                        </div>
+                    </div>
+                    <button id="title-button-4" class="btn btn-outline-dark form-control mt-2" onclick="switchTitle4()">
+                        <i class="fas fa-plus"></i>
+                    </button>
                 </div>
             </div>
         </div>

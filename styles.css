@@ -128,12 +128,51 @@ body {
        0px -4px 3px #333333;  
 }
 
+#title-3 {
+    font-family: "M PLUS 1p";
+    font-size: 50px;
+    position: absolute;
+    bottom: 120px;
+    left: 160px;
+    color: #fff4b5;
+    letter-spacing : 0px;
+    text-shadow    : 
+       4px  4px 3px #333333,
+      -4px  4px 3px #333333,
+       4px -4px 3px #333333,
+      -4px -4px 3px #333333,
+       4px  0px 3px #333333,
+       0px  4px 3px #333333,
+      -4px  0px 3px #333333,
+       0px -4px 3px #333333;  
+}
+
+#title-4 {
+    font-family: "M PLUS 1p";
+    font-size: 50px;
+    position: absolute;
+    bottom: 40px;
+    left: 160px;
+    color: #b5c0ff;
+    letter-spacing : 0px;
+    text-shadow    : 
+       4px  4px 3px #333333,
+      -4px  4px 3px #333333,
+       4px -4px 3px #333333,
+      -4px -4px 3px #333333,
+       4px  0px 3px #333333,
+       0px  4px 3px #333333,
+      -4px  0px 3px #333333,
+       0px -4px 3px #333333;  
+}
+
 .input-number {
     max-width: 60%;
 }
 
 .img-opt {
     max-width: 100%;
+    border: 0.1px solid;
 }
 
 #generate {
@@ -206,4 +245,24 @@ body {
     #main-another {
         display: none;
     }
+}
+
+#title-3-none {
+    display: none;
+}
+
+#title-4-none {
+    display: none;
+}
+
+#title-input-3-none {
+    display: none;
+}
+
+#title-input-4-none {
+    display: none;
+}
+
+#title-button-4 {
+    display: none;
 }
